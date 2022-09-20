@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="shortcut icon" href="./images/favicon.svg" type="image/x-icon" />
+    <script src="index.js" defer></script>
+    <link rel="stylesheet" href="style.css" />
+    <title>Password Generator</title>
+  </head>
+  <body>
+    <main>
+      <h1>Password Generator</h1>
+      <section class="password">
+        <span id="password">PTx1f5DaFX</span>
+        <img src="./images/icon-copy.svg" alt="copy" id="copy" />
+      </section>
+      <section class="options">
+        <div class="charLength">
+          Character Length
+          <h2 id="charLength"></h2>
+        </div>
+        <input
+          type="range"
+          name="length"
+          id="length"
+          min="1"
+          max="20"
+          step="1"
+          value="10"
+        /><br />
+
+        <div class="pretty p-svg p-fill">
+          <input type="checkbox" name="uppercase" id="uppercase" />
+          <div class="state p-success">
+            <img class="svg" alt="tick" src="./images/icon-check.svg" />
+            <label>Include Uppercase Letters</label>
+          </div>
+        </div>
+        <div class="pretty p-svg p-fill">
+          <input type="checkbox" name="lowercase" id="lowercase" />
+          <div class="state p-success">
+            <img class="svg" alt="tick" src="./images/icon-check.svg" />
+            <label>Include Lowercase Letters</label>
+          </div>
+        </div>
+        <div class="pretty p-svg p-fill">
+          <input type="checkbox" name="numbers" id="numbers" />
+          <div class="state p-success">
+            <img class="svg" alt="tick" src="./images/icon-check.svg" />
+            <label>Include Numbers</label>
+          </div>
+        </div>
+        <div class="pretty p-svg p-fill">
+          <input type="checkbox" name="symbols" id="symbols" />
+          <div class="state p-success">
+            <img class="svg" alt="tick" src="./images/icon-check.svg" />
+            <label>Include Symbols</label>
+          </div>
+        </div>
+
+        <div class="strength">
+          STRENGTH
+          <span id="strength"
+            ><span id="strength-span">WEAK</span>
+            <span class="strength-block">
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+            </span>
+          </span>
+        </div>
+        <button>
+          GENERATE<svg
+            width="12"
+            height="12"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fill="#24232C"
+              d="m5.106 12 6-6-6-6-1.265 1.265 3.841 3.84H.001v1.79h7.681l-3.841 3.84z"
+            />
+          </svg>
+        </button>
+      </section>
+    </main>
+  </body>
+</html>
